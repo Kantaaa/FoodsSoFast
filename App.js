@@ -1,12 +1,10 @@
-import React from "react";
-import { StatusBar as ExpoStatusBar } from "expo-status-bar";
-import { StatusBar, StyleSheet, Text, SafeAreaView, View } from "react-native";
+import React from 'react';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { StatusBar, StyleSheet, Text, SafeAreaView, View } from 'react-native';
 
 // const isAndroid = Platform.OS === "android";
 // const checkOS = () => {
 //   return isAndroid ? 40 : 0;
-// };
-
 const App = () => {
   return (
     <>
@@ -26,17 +24,17 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: StatusBar.currentHeight,
+    marginTop: StatusBar.currentHeight
   },
   viewCon: {
     padding: 16,
-    backgroundColor: "lightblue",
+    backgroundColor: 'lightblue'
   },
   viewCon2: {
     flex: 1,
     padding: 16,
-    backgroundColor: "blue",
-  },
+    backgroundColor: 'blue'
+  }
 });
 
 export default App;
