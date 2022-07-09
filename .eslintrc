@@ -7,7 +7,9 @@
       "error",
       {
         "endOfLine": "auto"
-      }
+      },
+      "warn",
+      { "printWidth": 120 }
     ],
     "comma-dangle": [
       "off",
