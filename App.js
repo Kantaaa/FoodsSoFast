@@ -6,8 +6,12 @@ import { RestaurantsScreen } from './src/features/restaurants/screens/restaurant
 export default function App() {
   return (
     <>
-      <RestaurantsScreen />
-      <ExpoStatusBar style="auto" />
+
+      <ThemeProvider theme={theme}>
+        <RestaurantsScreen />
+        <RestaurantsScreen />
+        <ExpoStatusBar style="auto" />
+      </ThemeProvider>
     </>
   );
 }
