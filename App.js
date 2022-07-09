@@ -1,6 +1,7 @@
 import React from 'react';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { StatusBar, StyleSheet, Text, SafeAreaView, View } from 'react-native';
+import MySearchbar from './Components/SearchBar';
 
 // const isAndroid = Platform.OS === "android";
 // const checkOS = () => {
@@ -10,7 +11,7 @@ const App = () => {
     <>
       <SafeAreaView style={styles.container}>
         <View style={styles.viewCon}>
-          <Text>Search </Text>
+          <MySearchbar />
         </View>
         <View style={styles.viewCon2}>
           <Text>Stuff </Text>
