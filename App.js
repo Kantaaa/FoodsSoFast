@@ -10,6 +10,7 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <RestaurantsScreen />
+        <RestaurantsScreen />
         <ExpoStatusBar style="auto" />
       </ThemeProvider>
     </>
