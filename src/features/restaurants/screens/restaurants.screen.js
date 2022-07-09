@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import styled from 'styled-components/native';
 
-import { RestaurantInfoCard } from '../components/restaurant-info.component';
+import { RestaurantInfoCard } from '../../../components/restaurant-info.component';
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
