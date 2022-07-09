@@ -1,25 +1,24 @@
 import React from 'react';
 import styled from 'styled-components/native';
+import { Text, StyleSheet } from 'react-native';
 import { Card } from 'react-native-paper';
 
 const RCard = styled(Card)`
-  background-color: ${(props) =>
-    props.theme.colors.bg.primary};
+  background-color: white;
 `;
 const RCover = styled(Card.Cover)`
-  padding: ${(props) => props.theme.space[3]};
-  background-color: ${(props) =>
-    props.theme.colors.bg.secondary};
+  padding: 20px;
+  background-color: white;
 `;
 
 const Title = styled.Text`
-  padding: ${(props) => props.theme.space[3]};
-  color: ${(props) => props.theme.colors.ui.error};
+  padding: 16px;
+  color: red;
 `;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
-    name = 'Kantas Sandwiches',
+    name = 'Le Sandwiches',
     icon,
     photos = [
       'https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg'
