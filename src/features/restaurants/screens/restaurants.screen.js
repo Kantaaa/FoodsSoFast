@@ -13,7 +13,8 @@ import { RestaurantInfoCard } from '../components/restaurant-info.component';
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
-  margin-top: ${StatusBar.currentHeight}px;
+  ${StatusBar.currentHeight &&
+  `margin-top: ${StatusBar.currentHeight} px`};
 `;
 
 const SearchContainer = styled.View`
