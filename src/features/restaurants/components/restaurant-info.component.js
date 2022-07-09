@@ -13,8 +13,19 @@ const RCover = styled(Card.Cover)`
 `;
 
 const Title = styled.Text`
+  font-family: ${(props) => props.theme.fonts.heading};
+  font-size: ${(props) => props.theme.fontSizes.body};
   padding: ${(props) => props.theme.space[3]};
   color: ${(props) => props.theme.colors.text.primary};
+`;
+const Address = styled.View`
+  font-family: ${(props) => props.theme.fonts.body};
+  font-size: ${(props) => props.theme.fontSizes.caption};
+  padding: ${(props) => props.theme.space[3]};
+`;
+
+const Info = styled.View`
+  padding: ${(props) => props.theme.space[3]};
 `;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
@@ -24,7 +35,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     photos = [
       'https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg'
     ],
-    address = '100 some random street',
+    address = 'Oslo streetfood',
     isOpenNow = true,
     rating = 4,
     isClosedTemporarily
@@ -33,7 +44,10 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
   return (
     <RCard elevation={5}>
       <RCover key={name} source={{ uri: photos[0] }} />
-      <Title>{name}</Title>
+      <Info>
+        <Title>{name}</Title>
+        <Address>{address}</Address>
+      </Info>
     </RCard>
   );
 };
