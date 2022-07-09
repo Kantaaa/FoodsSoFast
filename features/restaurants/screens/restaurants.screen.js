@@ -6,16 +6,15 @@ import {
   SafeAreaView,
   View
 } from 'react-native';
-import { RestaurantInfo } from '../components/resturant-info.component';
+import { RestaurantInfoCard } from '../components/restaurant-info.component';
 
 export const RestaurantsScreen = () => (
   <SafeAreaView style={styles.container}>
     <View style={styles.search}>
       <Searchbar />
     </View>
-    <View style={styles.list}>
-      <RestaurantInfo />
-    </View>
+    <RestaurantInfoCard />
+    <View style={styles.list}></View>
   </SafeAreaView>
 );
 
@@ -30,6 +29,6 @@ const styles = StyleSheet.create({
   list: {
     flex: 1,
     padding: 16,
-    backgroundColor: 'blue'
+    backgroundColor: 'silver'
   }
 });

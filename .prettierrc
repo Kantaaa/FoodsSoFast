@@ -5,6 +5,7 @@
   "singleQuote": true,
   "trailingComma": "none",
   "jsxBracketSameLine": true,
+  "useTabs": false,
   "prettier/prettier": [
     "warn",
     {
