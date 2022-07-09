@@ -5,7 +5,13 @@ const MySearchbar = () => {
   const [searchQuery, setSearchQuery] = React.useState('');
   const onChangeSearch = (query) => setSearchQuery(query);
 
-  return <Searchbar placeholder="Search" onChange={onChangeSearch} value={searchQuery} />;
+  return (
+    <Searchbar
+      placeholder="Search"
+      onChange={onChangeSearch}
+      value={searchQuery}
+    />
+  );
 };
 
 export default MySearchbar;

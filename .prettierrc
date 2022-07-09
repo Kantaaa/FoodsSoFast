@@ -1,16 +1,19 @@
 {
   "semi": true,
   "tabWidth": 2,
-  "printWidth": 100,
+  "printWidth": 60,
   "singleQuote": true,
   "trailingComma": "none",
   "jsxBracketSameLine": true,
-  "endOfLine": "auto",
   "prettier/prettier": [
     "warn",
     {
       "singleQuote": true,
       "parser": "flow"
+    },
+    "warn",
+    {
+      "endOfLine": "auto"
     }
   ]
 }
