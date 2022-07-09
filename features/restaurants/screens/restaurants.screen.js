@@ -6,7 +6,7 @@ import {
   SafeAreaView,
   View
 } from 'react-native';
-import { RestaurantInfoCard } from '../components/restaurant-info.component';
+import { RestaurantInfoCard } from '../components/resturantInfoCardComponent';
 
 export const RestaurantsScreen = () => (
   <SafeAreaView style={styles.container}>
