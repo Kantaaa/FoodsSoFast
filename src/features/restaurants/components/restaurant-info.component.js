@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import { Card } from 'react-native-paper';
+import { Image } from 'react-native';
 
 const RCard = styled(Card)`
   background-color: ${(props) =>
@@ -28,6 +29,11 @@ const Info = styled.View`
   padding: ${(props) => props.theme.space[3]};
 `;
 
+const Rating = styled.View`
+  flex-direction: row;
+  padding-left: ${(props) => props.theme.space[3]};
+`;
+
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
     name = 'Kantas Sandwiches',
@@ -41,11 +47,23 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     isClosedTemporarily
   } = restaurant;
 
+  const ratingArray = Array.from(
+    new Array(Math.floor(rating))
+  );
+
   return (
     <RCard elevation={5}>
       <RCover key={name} source={{ uri: photos[0] }} />
       <Info>
         <Title>{name}</Title>
+        <Rating>
+          {ratingArray.map(() => (
+            <Image
+              style={{ width: 20, height: 20 }}
+              source={require('../../../../assets/ratingstar.png')}
+            />
+          ))}
+        </Rating>
         <Address>{address}</Address>
       </Info>
     </RCard>
