@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components/native';
 import { Card } from 'react-native-paper';
 import { Image } from 'react-native';
-import { View } from 'react-native-web';
 
-const RCard = styled(Card)`
+import { Spacer } from '../../../components/spacer/spacer.component';
+
+const ResturantCard = styled(Card)`
   background-color: ${(props) =>
     props.theme.colors.bg.primary};
 `;
-const RCover = styled(Card.Cover)`
+const ResturantCardCover = styled(Card.Cover)`
   padding: ${(props) => props.theme.space[3]};
   background-color: ${(props) =>
     props.theme.colors.bg.primary};
@@ -52,9 +53,9 @@ const TextClosedTemp = styled.Text`
   color: ${(props) => props.theme.colors.text.error};
 `;
 
-const ViewOpen = styled.View`
-  padding: ${(props) => props.theme.space[3]};
-`;
+// const ViewOpen = styled.View`
+//   padding: ${(props) => props.theme.space[3]};
+// `;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
@@ -74,8 +75,11 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
   );
 
   return (
-    <RCard elevation={5}>
-      <RCover key={name} source={{ uri: photos[0] }} />
+    <ResturantCard elevation={5}>
+      <ResturantCardCover
+        key={name}
+        source={{ uri: photos[0] }}
+      />
       <Info>
         <Title>{name}</Title>
         <Section>
@@ -93,7 +97,8 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
                 Close Temporarily
               </TextClosedTemp>
             )}
-            <ViewOpen />
+
+            <Spacer variant="left.large" />
             {isOpenNow && (
               <Image
                 style={{
@@ -103,7 +108,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
                 source={require('../../../../assets/openred.png')}
               />
             )}
-            <ViewOpen />
+            <Spacer variant="left.large" />
             <Image
               style={{
                 width: 15,
@@ -115,6 +120,6 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
         </Section>
         <Address>{address}</Address>
       </Info>
-    </RCard>
+    </ResturantCard>
   );
 };
