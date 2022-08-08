@@ -92,30 +92,31 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
             ))}
           </Rating>
           <SectionEnd>
-            {isClosedTemporarily && (
+            {isClosedTemporarily ? (
               <TextClosedTemp>
                 Close Temporarily
               </TextClosedTemp>
-            )}
-
-            <Spacer variant="left.large" />
-            {isOpenNow && (
+            ) : null}
+            <Spacer position="left" size="large">
+              {isOpenNow ? (
+                <Image
+                  style={{
+                    width: 30,
+                    height: 20
+                  }}
+                  source={require('../../../../assets/openred.png')}
+                />
+              ) : null}
+            </Spacer>
+            <Spacer position="left" size="large">
               <Image
                 style={{
-                  width: 30,
-                  height: 20
+                  width: 15,
+                  height: 15
                 }}
-                source={require('../../../../assets/openred.png')}
+                source={{ uri: icon }}
               />
-            )}
-            <Spacer variant="left.large" />
-            <Image
-              style={{
-                width: 15,
-                height: 15
-              }}
-              source={{ uri: icon }}
-            />
+            </Spacer>
           </SectionEnd>
         </Section>
         <Address>{address}</Address>
